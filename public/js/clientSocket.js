@@ -1,6 +1,6 @@
 let connected = false
 
-let socket = io("http://localhost:3001")
+let socket = io("https://lta-social-media.herokuapp.com/")
 // set up the userLoggedIn on the client
 socket.emit("setup" , userLoggedIn)
 // set the connecion to true
