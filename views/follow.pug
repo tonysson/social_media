@@ -1,0 +1,16 @@
+extends layouts/main-layout.pug
+block content
+    if !profileUser
+        span.errorMeesage Not found
+    else
+        script. 
+            const profileUserId = '!{profileUser._id}' 
+            const selectedTab = '!{selectedTab}' 
+        
+        .tabsContainer
+            +createTable("Following" ,`/profile/${profileUser.username}/following`, selectedTab != "followers")
+            +createTable("Followers" ,`/profile/${profileUser.username}/followers`, selectedTab == "followers")
+        .resultsContainer
+
+block scripts
+    script(src="/js/follow.js")
