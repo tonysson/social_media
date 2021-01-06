@@ -675,7 +675,7 @@ function outPutPosts(results , container){
     })
 
     if(results.length == 0) {
-        container.append("<span class='noResult'>No results found</span>")
+        container.append("<span class='noResult'>Search users and follow them to see their posts and have a fun</span>")
     }
 }
 
