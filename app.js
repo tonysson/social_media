@@ -3,9 +3,13 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const colors = require('colors');
 const session = require('express-session');
+const cors = require('cors');
 require('dotenv').config();
 const { requireLogin } = require('./middlewares');
 const app = express();
+
+// to insure security when app deploys into heroku
+app.enable('trust proxy');
 
 //db connection
  require('./database');
@@ -21,6 +25,12 @@ const io = require("socket.io")(server , {pingTimeout : 60000})
 //set up of view engine
 app.set('view engine', 'pug');
 app.set('views', 'views');
+
+
+// implement CORS
+app.use(cors());
+app.options('*',cors())
+
 
 //Middlewares
 app.use(bodyParser.urlencoded({extended:false}));
