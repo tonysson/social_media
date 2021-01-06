@@ -1,6 +1,7 @@
 ## social_media is like a clone of twitter where you can post , like , comment , message in real time.
 
-![social](https://user-images.githubusercontent.com/53177468/103832702-35495880-507f-11eb-9894-dd845c70c80d.PNG)
+![social](https://user-images.githubusercontent.com/53177468/103832702-35495880-507f-11eb-9894-dd845c70c80d.PNG) ![social](https://user-images.githubusercontent.com/53177468/103832702-35495880-507f-11eb-9894-dd845c70c80d.PNG)
+
 
 
 ### TECH
